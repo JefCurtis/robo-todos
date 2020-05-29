@@ -1,12 +1,6 @@
 <script>
 import Child from "./child.svelte";
 import Login from "./login.svelte"
-
-const user = {
-	userId: 1234,
-	name: "Jef C",
-	email: "jef@email.com",
-}
 </script>
 
 <svelte:head>
