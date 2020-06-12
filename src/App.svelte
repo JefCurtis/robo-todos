@@ -1,34 +1,38 @@
 <script>
-import Child from "./child.svelte";
-import Login from "./login.svelte"
+  import Login from "./login.svelte";
+  import TodoList from "./todoList.svelte";
+  import Footer from "./Footer.svelte";
+  import { authState } from "rxfire/auth";
+  import { auth } from "./firebase";
+
+  let user = authState(auth);
 </script>
 
+<style>
+  .body {
+    max-width: 700px;
+    min-width: 375px;
+  }
+  /* footer {
+    max-width: 700px;
+    min-width: 375px;
+  } */
+</style>
+
 <svelte:head>
-	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet" />
 </svelte:head>
 
-<main>	
-<Login></Login>
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<div class="body flex-grow">
+  <main class="">
+    <Login />
+    {#if $user}
+      <TodoList uid={$user.uid} />
+    {/if}
+  </main>
+  {#if $user}
+    <Footer uid={$user.uid} />
+  {/if}
+</div>

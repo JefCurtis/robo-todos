@@ -16,7 +16,8 @@
     "rollup-plugin-terser": "^5.1.2",
     "rxfire": "^3.12.5",
     "rxjs": "^6.5.5",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-awesome": "^2.3.0"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"
