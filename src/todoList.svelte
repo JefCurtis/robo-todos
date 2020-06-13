@@ -65,8 +65,9 @@
   {:else}no tasks{/if}
 
   {#if completedTodos.length > 0}
-    <ul class="border border-gray-500 rounded shadow-md mb-4 p-1 bg-white">
-      <h1 class="text-gray-700 font-bold text-center">Completed</h1>
+    <ul
+      class="border border-gray-500 rounded shadow-md mb-4 p-1 bg-white text-sm">
+      <h1 class="text-gray-700 font-bold text-center text-sm">Completed</h1>
       {#each completedTodos as todo}
         <TodoItem
           {...todo}

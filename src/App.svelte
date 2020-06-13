@@ -11,7 +11,7 @@
 <style>
   .body {
     max-width: 700px;
-    min-width: 375px;
+    min-width: 359px;
   }
 </style>
 
@@ -22,7 +22,7 @@
 </svelte:head>
 
 <div class="body mx-auto">
-  <main class="mx-2 w-full">
+  <main class="mx-2">
     <Login />
     {#if $user}
       <TodoList uid={$user.uid} />
