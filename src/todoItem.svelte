@@ -57,8 +57,8 @@
         rows="3"
         type="text"
         class="bg-white focus:outline-none focus:shadow-outline border
-        border-gray-500 rounded-lg py-1 px-2 block w-full appearance-none
-        leading-normal flex-1 mr-2"
+        border-gray-500 text-sm rounded-lg py-1 px-2 block w-full
+        appearance-none leading-normal flex-1 mr-2"
         autofocus
         bind:value={text} />
       <div class="flex flex-col">

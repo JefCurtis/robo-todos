@@ -13,10 +13,6 @@
     max-width: 700px;
     min-width: 375px;
   }
-  /* footer {
-    max-width: 700px;
-    min-width: 375px;
-  } */
 </style>
 
 <svelte:head>
@@ -25,14 +21,12 @@
     rel="stylesheet" />
 </svelte:head>
 
-<div class="body flex-grow">
-  <main class="">
+<div class="body mx-auto">
+  <main class="mx-2 w-full">
     <Login />
     {#if $user}
       <TodoList uid={$user.uid} />
+      <Footer uid={$user.uid} />
     {/if}
   </main>
-  {#if $user}
-    <Footer uid={$user.uid} />
-  {/if}
 </div>

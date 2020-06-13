@@ -21,7 +21,8 @@
 </style>
 
 <form
-  class="flex mx-2 p-4 border border-gray-500 shadow-md rounded bg-white"
+  class="flex p-4 border border-gray-500 shadow-md rounded bg-white sticky
+  bottom-0"
   on:submit|preventDefault={add}>
   <input
     class="bg-white focus:outline-none focus:shadow-outline border
@@ -32,8 +33,8 @@
     type="text"
     placeholder="Add a new task.." />
   <button
-    class="bg-white hover:bg-gray-100 text-gray-700 font-semibold py-1 px-3
-    border border-gray-500 rounded shadow"
+    class="bg-white hover:bg-gray-100 text-sm text-gray-700 font-semibold py-1
+    px-3 border border-gray-500 rounded shadow"
     submit>
     Add task
   </button>
