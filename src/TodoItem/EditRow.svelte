@@ -4,32 +4,12 @@
   import { pencil, refresh, check, trash } from "svelte-awesome/icons";
   const dispatch = createEventDispatcher();
 
-  export let complete;
-  const toggleEdit = () => dispatch("toggleEdit");
-  const toggleComplete = () => dispatch("toggleComplete");
   const toggleDelete = () => dispatch("toggleDelete");
 </script>
 
 <button
-  class="text-xl text-blue-700 mr-2 outline-none appearance-none "
-  on:click={toggleEdit}>
-  <Icon data={pencil} />
-</button>
-{#if complete}
-  <button
-    class="text-xl text-blue-700 mr-2 outline-none appearance-none"
-    on:click={toggleComplete}>
-    <Icon data={refresh} />
-  </button>
-{:else}
-  <button
-    class="text-xl text-green-700 mr-2 outline-none appearance-none"
-    on:click={toggleComplete}>
-    <Icon data={check} />
-  </button>
-{/if}
-<button
-  class="text-xl text-red-700 mr-2 outline-none appearance-none"
+  class="text-red-700 outline-none appearance-none px-3 py-1 border rounded
+  border-gray-300"
   on:click={toggleDelete}>
   <Icon data={trash} />
 </button>
